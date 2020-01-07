@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'reporteros',
     loadChildren: () => import('./modules/reporteros/reporteros.module').then(m => m.ReporterosModule)
+  },
+  {
+    path: 'categorias',
+    loadChildren: () => import('./modules/categorias/categorias.module').then(m => m.CategoriasModule)
   }
 ];
 

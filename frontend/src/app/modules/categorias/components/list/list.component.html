@@ -1,6 +1,6 @@
-<h5>Reporteros</h5>
+<h5>Categrias</h5>
 <div class="col-10 list-group list-group-flush">
-  <li class="list-group-item" *ngFor="let reportero of (reporterosService.reporteros$ | async)">
-    <span class="col">{{ reportero.name }}</span>
+  <li class="list-group-item" *ngFor="let categoria of (categoriasService.categorias$ | async)">
+    <span class="col">{{ categoria.id }}</span>
   </li>
 </div>

@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ReporteroCreationComponent } from './components/create/create.component';
-import { ReporterosListComponent } from './components/list/list.component';
-import { ReporterosPageComponent } from './components/page/page.component';
+import { CategoriaCreationComponent } from './components/create/create.component';
+import { CategoriasListComponent } from './components/list/list.component';
+import { CategoriasPageComponent } from './components/page/page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ReporterosPageComponent,
+    component: CategoriasPageComponent,
     children: [
       {
         path: '',
-        component: ReporterosListComponent
+        component: CategoriasListComponent
       },
       {
         path: 'create',
-        component: ReporteroCreationComponent
+        component: CategoriaCreationComponent
       }
     ]
   }

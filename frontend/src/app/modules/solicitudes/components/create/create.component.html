@@ -1,27 +1,29 @@
-<div class="row">
-  <div class="col-md-4">
-    <label>Reporter</label>
-    <select class="form-control">
-      <option value="1">Reportero 1</option>
-    </select>
+<form (ngSubmit)="create()">
+  <div class="row">
+    <div class="col-md-4">
+      <label>Reporter</label>
+      <select class="form-control">
+        <option value="1">Reportero 1</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label>Categoria</label>
+      <select class="form-control">
+        <option value="1">1</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label>Descripcion Equipo</label>
+      <input class="form-control">
+    </div>
   </div>
-  <div class="col-md-4">
-    <label>Categoria</label>
-    <select class="form-control">
-      <option value="1">1</option>
-    </select>
+  <div class="row">
+    <div class="col-4">
+      <label>Descripcion CV</label>
+      <textarea class="form-control"></textarea>
+    </div>
   </div>
-  <div class="col-md-4">
-    <label>Descripcion Equipo</label>
-    <input class="form-control">
+  <div class="row justify-content-center">
+    <button type="submit" class="col-3 btn btn-success" [disabled]="movieForm.invalid">Crear</button>
   </div>
-</div>
-<div class="row">
-  <div class="col-4">
-    <label>Descripcion CV</label>
-    <textarea class="form-control"></textarea>
-  </div>
-</div>
-<div class="row justify-content-center">
-  <button type="submit" class="col-3 btn btn-success" [disabled]="movieForm.invalid">Crear</button>
-</div>
+</form>

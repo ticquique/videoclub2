@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { SolicitudesService } from '../../services/solicitudes.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ReporterosService } from '../../../reporteros/services/reporteros.service';
 
 @Component({
   templateUrl: './create.component.html'
@@ -9,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class SolicitudCreationComponent {
   solicitudForm: FormGroup;
 
-  constructor(public solicitudService: SolicitudesService) {
+  constructor(public solicitudService: SolicitudesService, public reporterosService: ReporterosService) {
     this.solicitudForm = new FormGroup({
       fecha: new FormControl('', [Validators.required]),
       aprobada: new FormControl('', [Validators.required]),
@@ -17,6 +18,7 @@ export class SolicitudCreationComponent {
       equipoFotografico: new FormControl('', [Validators.required]),
       resumenCV: new FormControl('', [Validators.required])
     });
+    this.reporterosService.get().subscribe()
   }
 
   create() {

@@ -13,7 +13,7 @@ export class SolicitudCreationComponent {
   constructor(public solicitudService: SolicitudesService, public reporterosService: ReporterosService) {
     this.solicitudForm = new FormGroup({
       fecha: new FormControl('', [Validators.required]),
-      aprobada: new FormControl('', [Validators.required]),
+      aprobada: new FormControl(false, [Validators.required]),
       reportero: new FormControl('', [Validators.required]),
       equipoFotografico: new FormControl('', [Validators.required]),
       resumenCV: new FormControl('', [Validators.required])

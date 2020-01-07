@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "target": "ES2015",
+        "module": "commonjs",
+        "outDir": "dist",
+        "sourceMap": true,
+        "paths": {
+            "@app/*": ["./*"],
+            "@interfaces/*": ["interfaces/*"],
+            "@loaders/*": ["loaders/*"],
+            "@utils/*": ["utils/*"],
+            "@models/*": ["models/*"],
+            "@middleware/*": ["middleware/*"],
+            "@v1/*": ["api/v1/*"],
+            "@env": ["env"],
+        },
+    }
+}

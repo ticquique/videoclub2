@@ -20,26 +20,36 @@ const ReporteroFields = {
         ref: Categoria,
         required: true
     },
+    dni: {
+        type: String,
+        required: true,
+        trim: true
+    },
     name: {
         type: String,
         required: true,
         trim: true
     },
-    descripcion: {
+    apellidos: {
         type: String,
         required: true,
         trim: true
     },
-    equipoFotografico: {
+    direccion: {
         type: String,
         required: true,
         trim: true
     },
-    resumenCV: {
+    ciudad: {
         type: String,
         required: true,
         trim: true
-    }
+    },
+    cp: {
+        type: String,
+        required: true,
+        trim: true
+    },
 };
 
 const ReporteroSchema = new Schema(ReporteroFields, {

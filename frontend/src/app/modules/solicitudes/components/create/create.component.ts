@@ -9,6 +9,7 @@ import { ReporterosService } from '../../../reporteros/services/reporteros.servi
 })
 export class SolicitudCreationComponent {
   solicitudForm: FormGroup;
+  reporteros: any;
 
   constructor(public solicitudService: SolicitudesService, public reporterosService: ReporterosService) {
     this.solicitudForm = new FormGroup({
@@ -16,12 +17,18 @@ export class SolicitudCreationComponent {
       aprobada: new FormControl(false, [Validators.required]),
       reportero: new FormControl('', [Validators.required]),
       equipoFotografico: new FormControl('', [Validators.required]),
-      resumenCV: new FormControl('', [Validators.required])
+      resumenCV: new FormControl('', [Validators.required]),
+      descripcion: new FormControl('', [Validators.required]),
     });
-    this.reporterosService.get().subscribe()
+    this.reporterosService.get().subscribe((response) => this.reporteros = response);
   }
 
   create() {
-    this.solicitudService.create(this.solicitudForm.value).subscribe(() => this.solicitudForm.reset());
+    const soli = { ...this.solicitudForm.value };
+    soli.reportero = this.reporteros.filter((rep) => {
+      return this.solicitudForm.controls.reportero.value === rep.name;
+    })[0];
+    console.log(soli)
+    this.solicitudService.create(soli).subscribe(() => this.solicitudForm.reset());
   }
 }

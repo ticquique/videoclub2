@@ -29,7 +29,7 @@ const SolicitudFields = {
         default: false,
     },
     fecha: {
-        type: Date,
+        type: String,
         required: true,
     },
     equipoFotografico: {

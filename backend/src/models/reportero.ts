@@ -57,6 +57,7 @@ const ReporteroSchema = new Schema(ReporteroFields, {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
 });
 
+
 ReporteroSchema.loadClass(ReporteroClass);
 
 export const Reportero: Model<IReporteroModel> = model('Reportero', ReporteroSchema);

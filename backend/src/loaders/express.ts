@@ -3,6 +3,7 @@
 import getEnv from "../env";
 import ILoader from "./interfaces";
 import * as express from "express";
+import * as cors from "cors";
 import * as log4js from 'log4js';
 import { httpLogger, initialLogger } from "../utils/logger";
 import expressSchema, { schema } from "../api/v1/schema";
@@ -16,6 +17,7 @@ import expressSchema, { schema } from "../api/v1/schema";
 export class ExpressLoader implements ILoader<Express.Application> {
     async load() {
         const app = express();
+        app.use(cors())
         const env = await getEnv();
 
         const port = +env.express.port;

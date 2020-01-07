@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   templateUrl: './details.component.html'
 })
-export class MovieDetailsComponent {
+export class ReporteroDetailsComponent {
   constructor(private activatedRoute: ActivatedRoute) {
   }
 }

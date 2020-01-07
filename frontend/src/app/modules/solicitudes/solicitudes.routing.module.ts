@@ -1,27 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MoviesPageComponent } from './components/page/page.component';
-import { MoviesListComponent } from './components/list/list.component';
-import { MoviesCreationComponent } from './components/create/create.component';
-import { MovieDetailsComponent } from './components/details/details.component';
+import { SolicitudCreationComponent } from './components/create/create.component';
+import { SolicitudesListComponent } from './components/list/list.component';
+import { SolicitudesPageComponent } from './components/page/page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MoviesPageComponent,
+    component: SolicitudesPageComponent,
     children: [
       {
         path: '',
-        component: MoviesListComponent
+        component: SolicitudesListComponent
       },
       {
         path: 'create',
-        component: MoviesCreationComponent
-      },
-      {
-        path: ':id',
-        component: MovieDetailsComponent
+        component: SolicitudCreationComponent
       }
     ]
   }

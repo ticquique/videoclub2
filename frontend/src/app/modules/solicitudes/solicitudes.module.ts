@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 
 import { SolicitudesRoutingModule } from './solicitudes.routing.module';
-import { MoviesPageComponent } from './components/page/page.component';
-import { MoviesListComponent } from './components/list/list.component';
-import { MoviesCreationComponent } from './components/create/create.component';
+import { SolicitudesPageComponent } from './components/page/page.component';
+import { SolicitudesListComponent } from './components/list/list.component';
+import { SolicitudCreationComponent } from './components/create/create.component';
 import { SolicitudesService } from './services/solicitudes.service';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { MovieDetailsComponent } from './components/details/details.component';
 
 @NgModule({
   imports: [
@@ -14,10 +13,9 @@ import { MovieDetailsComponent } from './components/details/details.component';
     SharedModule
   ],
   declarations: [
-    MoviesPageComponent,
-    MoviesListComponent,
-    MoviesCreationComponent,
-    MovieDetailsComponent
+    SolicitudCreationComponent,
+    SolicitudesListComponent,
+    SolicitudesPageComponent
   ],
   providers: [SolicitudesService]
 })

@@ -6,16 +6,19 @@ import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 import { Solicitud } from '../../models/solicitud';
 import { Reportero } from '../../models/reportero';
+import { Categoria } from '../../models/categoria';
 
-export type Endpoints = 'solicitud' | 'reportero';
-type Interfaces = Solicitud | Reportero;
+export type Endpoints = 'solicitud' | 'reportero' | 'categoria';
+type Interfaces = Solicitud | Reportero | Categoria;
 
-const solicitud = "{id, _id, nombre, categoria, aprobada}"
-const reportero = "{id, _id, nombre, categoria, aprobada}"
+const solicitud = "{ _id, _id, nombre, categoria, aprobada}"
+const categoria = "{ _id, ppp }"
+const reportero =`{ _id, name, dni, apellidos, direccion, ciudad, cp }`
 
 const mapping = {
   solicitud,
-  reportero
+  reportero,
+  categoria,
 }
 
 @Injectable()

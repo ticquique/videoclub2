@@ -1,6 +1,6 @@
 <h5>Categrias</h5>
 <div class="col-10 list-group list-group-flush">
   <li class="list-group-item" *ngFor="let categoria of (categoriasService.categorias$ | async)">
-    <span class="col">{{ categoria.id }}</span>
+    <span class="col">{{ categoria._id }}</span>
   </li>
 </div>

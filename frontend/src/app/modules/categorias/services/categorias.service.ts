@@ -15,7 +15,7 @@ export class CategoriasService {
   categorias$: Observable<Array<Categoria>>;
 
   constructor(private gqlhttp: GqlhttpService) {
-    this.apiPath = 'reportero';
+    this.apiPath = 'categoria';
     this.categorias = new BehaviorSubject<Array<Categoria>>([]);
     this.categorias$ = this.categorias.asObservable();
   }

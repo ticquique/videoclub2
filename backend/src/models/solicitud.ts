@@ -46,6 +46,18 @@ const SolicitudSchema = new Schema(SolicitudFields, {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
 });
 
+
+SolicitudSchema.pre('save', async function (this: Document & ISolicitud, next) {
+    try {
+        const date = new Date(this.fecha);
+        const dateAgo = date.setMonth(date.getMonth() - 1);
+        const existMember = await Solicitud.exists({ fecha: {"$gte": dateAgo } });
+        if (existMember) throw (new Error('No se pudo crear una nueva solicitud, espere un mes'));
+        next();
+    } catch (e) { next(e); }
+});
+
+
 SolicitudSchema.loadClass(SolicitudClass);
 
 export const Solicitud: Model<ISolicitudModel> = model('Solicitud', SolicitudSchema);

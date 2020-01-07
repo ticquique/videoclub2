@@ -52,6 +52,7 @@ const ReporteroFields = {
     },
 };
 
+
 const ReporteroSchema = new Schema(ReporteroFields, {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
 });

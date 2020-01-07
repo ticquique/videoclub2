@@ -27,7 +27,7 @@ export class SolicitudCreationComponent {
     const soli = { ...this.solicitudForm.value };
     soli.reportero = this.reporteros.filter((rep) => {
       return this.solicitudForm.controls.reportero.value === rep.name;
-    })[0];
+    })[0]._id;
     console.log(soli)
     this.solicitudService.create(soli).subscribe(() => this.solicitudForm.reset());
   }

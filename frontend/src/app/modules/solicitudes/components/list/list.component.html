@@ -1,6 +1,7 @@
 <h5>Solicitudes</h5>
 <div class="col-10 list-group list-group-flush">
   <li class="list-group-item" *ngFor="let solicitud of (solicitudesService.solicitudes$ | async)">
-    <span class="col">Solicitud: {{ solicitud.id }}</span>
+    <span class="col">Solicitud: {{ solicitud._id }}</span>
+    <span class="col">Solicitud: {{ solicitud.reportero.name }}</span>
   </li>
 </div>

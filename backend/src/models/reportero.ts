@@ -15,12 +15,27 @@ class ReporteroClass {
 }
 
 const ReporteroFields = {
-    calidad: {
+    categoria: {
         type: Schema.Types.ObjectId,
         ref: Categoria,
         required: true
     },
     name: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    descripcion: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    equipoFotografico: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    resumenCV: {
         type: String,
         required: true,
         trim: true

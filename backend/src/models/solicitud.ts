@@ -1,6 +1,7 @@
 import { Document, Schema, model, Model } from 'mongoose';
 import { Solicitud as ISolicitud } from '../interfaces/solicitud';
 import { Categoria } from './categoria';
+import { Reportero } from './reportero';
 
 /* - Código del socio (autonumérico)
 - Nombre (cadena, obligatorio y editable)
@@ -14,15 +15,30 @@ class SolicitudClass {
 }
 
 const SolicitudFields = {
-    nombre: {
+    reportero: {
+        type: Schema.Types.ObjectId,
+        ref: Reportero,
+        required: true
+    },
+    descripcion: {
         type: String,
-        index: true,
         required: true,
     },
-    categoria: {
-        type: Schema.Types.ObjectId,
-        ref: Categoria,
-        required: true
+    aprobada: {
+        type: Boolean,
+        default: false,
+    },
+    fecha: {
+        type: Date,
+        required: true,
+    },
+    equipoFotografico: {
+        type: String,
+        required: true,
+    },
+    resumenCV: {
+        type: String,
+        required: true,
     }
 };
 

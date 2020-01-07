@@ -1,11 +1,11 @@
 'use strict';
 
-import { Videoclub } from "../../../models";
-import { IVideoclub } from "../../../interfaces";
 import { All } from "../../methods";
+import { Reportero as IReportero } from "../../../interfaces/reportero"
+import { Reportero } from "../../../models/reportero";
 
-export class VideoclubResolver extends All<IVideoclub>{
+export class ReporteroResolver extends All<IReportero>{
     constructor() {
-        super(Videoclub);
+        super(Reportero);
     }
 }

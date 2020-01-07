@@ -1,26 +1,35 @@
 'use strict';
 
-import { GraphQLObjectType, GraphQLString, GraphQLNonNull, GraphQLInputObjectType } from 'graphql';
+import { GraphQLObjectType, GraphQLString, GraphQLNonNull, GraphQLInputObjectType, GraphQLBoolean, GraphQLList } from 'graphql';
+import { ReporteroResolver } from '../reportero/resolver';
+import { ReporteroType } from '../reportero/typedef';
 
-export const AdministratorType = new GraphQLObjectType({
-    name: 'Administrator',
+const reporteroResolver = new ReporteroResolver()
+export const SolicitudType = new GraphQLObjectType({
+    name: 'Solicitud',
     fields: {
         _id: { type: GraphQLString },
-        id: { type: GraphQLString },
-        username: { type: GraphQLString },
-        created_at: { type: GraphQLString },
-        updated_at: { type: GraphQLString }
+        reportero: {
+            resolve: async (parent, _) => await reporteroResolver.find(null, { page: 1, perPage: 1, resource: { _id: { $in: parent.rents } } }),
+            type: GraphQLList(ReporteroType)
+        },
+        aprobada: { type: GraphQLBoolean },
+        descripcion: { type: GraphQLString },
+        fecha: { type: GraphQLString },
+        equipoFotografico: { type: GraphQLString },
+        resumenCV: { type: GraphQLString },
     }
 });
 
-
-export const AdministratorInputType = new GraphQLInputObjectType({
-    name: 'AdministratorInput',
+export const SolicitudInputType = new GraphQLInputObjectType({
+    name: 'SolicitudInput',
     fields: {
         _id: { type: GraphQLString },
-        id: { type: GraphQLString },
-        username: { type: new GraphQLNonNull(GraphQLString) },
-        created_at: { type: GraphQLString },
-        updated_at: { type: GraphQLString }
+        reportero: { type: GraphQLString },
+        aprobada: { type: GraphQLBoolean },
+        descripcion: { type: GraphQLString },
+        fecha: { type: GraphQLString },
+        equipoFotografico: { type: GraphQLString },
+        resumenCV: { type: GraphQLString },
     }
 });

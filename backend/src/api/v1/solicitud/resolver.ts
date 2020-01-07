@@ -1,12 +1,12 @@
 'use strict';
 
-import { Administrator } from "../../../models";
-import { IAdministrator } from "../../../interfaces";
+import { Solicitud } from "../../../models/solicitud";
+import { Solicitud as ISolicitud } from "../../../interfaces/solicitud";
 import { All } from "../../methods";
 
-export class AdministratorResolver extends All<IAdministrator>{
+export class SolicitudResolver extends All<ISolicitud>{
     constructor() { 
-        super(Administrator);
-        this.model = Administrator 
+        super(Solicitud);
+        this.model = Solicitud 
     }
 }

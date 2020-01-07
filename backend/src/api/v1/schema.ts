@@ -3,22 +3,16 @@ import * as graphqlHTTP from "express-graphql";
 import getEnv from "../../env";
 import { AuthMiddleware } from "../../middleware";
 import { GraphQLSchema, GraphQLObjectType } from "graphql";
-import { VideoclubRouter } from "./videoclub";
+import { SolicitudRouter } from "./solicitud/solicitud";
 import { applyMiddleware } from "graphql-middleware";
-import { StatisticRouter } from "./statistic";
-import { RentRouter } from "./rent";
-import { MemberRouter } from "./member";
-import { FilmRouter } from "./film";
-import { AdministratorRouter } from "./administrator";
+import { CategoriaRouter } from "./categoria/categoria";
+import { ReporteroRouter } from "./reportero/reportero";
 
 const authService = new AuthMiddleware();
 const routers = [
-    new VideoclubRouter(),
-    new StatisticRouter(),
-    new RentRouter(),
-    new MemberRouter(),
-    new FilmRouter(),
-    new AdministratorRouter(),
+    new SolicitudRouter(),
+    new CategoriaRouter(),
+    new ReporteroRouter(),
 ];
 
 const routes = routers.reduce((o,c) => ({...o, ...c.getRoutes()}), {})

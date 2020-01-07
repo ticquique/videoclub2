@@ -1,31 +1,28 @@
 'use strict';
 
 import { GraphQLObjectType, GraphQLString, GraphQLInputObjectType, GraphQLNonNull } from 'graphql';
+import { CategoriaType } from '../categoria/typedef';
 
-export const VideoclubType = new GraphQLObjectType({
-    name: 'Videoclub',
+export const ReporteroType = new GraphQLObjectType({
+    name: 'Reportero',
     fields: {
         _id: { type: GraphQLString },
-        id: { type: GraphQLString },
-        manager: { type: GraphQLString },
-        city: { type: GraphQLString },
-        street: { type: GraphQLString },
-        postal_code: { type: GraphQLString },
-        created_at: { type: GraphQLString },
-        updated_at: { type: GraphQLString }
+        name: { type: GraphQLString },
+        categoria: { type: CategoriaType },
+        descripcion: { type: GraphQLString },
+        equipoFotografico: { type: GraphQLString },
+        resumenCV: { type: GraphQLString }
     }
 });
 
-export const VideoclubInputType = new GraphQLInputObjectType({
-    name: 'VideoclubInput',
+export const ReporteroInputType = new GraphQLInputObjectType({
+    name: 'ReporteroInput',
     fields: {
         _id: { type: GraphQLString },
-        id: { type: GraphQLString },
-        manager: { type: GraphQLNonNull(GraphQLString) },
-        city: { type: GraphQLNonNull(GraphQLString) },
-        street: { type: GraphQLNonNull(GraphQLString) },
-        postal_code: { type: GraphQLNonNull(GraphQLString) },
-        created_at: { type: GraphQLString },
-        updated_at: { type: GraphQLString }
+        name: { type: GraphQLString },
+        categoria: { type: GraphQLString },
+        descripcion: { type: GraphQLString },
+        equipoFotografico: { type: GraphQLString },
+        resumenCV: { type: GraphQLString }
     }
 })

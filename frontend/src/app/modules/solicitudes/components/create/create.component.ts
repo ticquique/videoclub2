@@ -9,13 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class MoviesCreationComponent {
   solicitudForm: FormGroup;
 
-  constructor(public solicitudService: SolicitudesService) {
-    this.solicitudForm = new FormGroup({
-      nombre: new FormControl('', [Validators.required]),
-      categoria: new FormControl('', [Validators.required]),
-      aprobada: new FormControl('', [Validators.required])
-    });
-  }
+  constructor(public solicitudService: SolicitudesService) {  }
 
   create() {
     this.solicitudService.create(this.solicitudForm.value).subscribe(() => this.solicitudForm.reset());

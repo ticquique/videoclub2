@@ -1,6 +1,5 @@
 import { Document, Schema, model, Model } from 'mongoose';
 import { Solicitud as ISolicitud } from '../interfaces/solicitud';
-import { Categoria } from './categoria';
 import { Reportero } from './reportero';
 
 /* - Código del socio (autonumérico)
@@ -50,9 +49,10 @@ const SolicitudSchema = new Schema(SolicitudFields, {
 SolicitudSchema.pre('save', async function (this: Document & ISolicitud, next) {
     try {
         const date = new Date(this.fecha);
-        const dateAgo = date.setMonth(date.getMonth() - 1);
-        const existMember = await Solicitud.exists({ fecha: {"$gte": dateAgo } });
-        if (existMember) throw (new Error('No se pudo crear una nueva solicitud, espere un mes'));
+        const dateAgo = new Date(date.setMonth(date.getMonth() - 1));
+        const existMember = await Solicitud.exists({ fecha: { "$gte": dateAgo } });
+        if (existMember) throw (new Error('Debe esperar al menos un mes entre solicitudes'));
+        this.fecha = date;
         next();
     } catch (e) { next(e); }
 });

@@ -10,8 +10,8 @@ export const SolicitudType = new GraphQLObjectType({
     fields: {
         _id: { type: GraphQLString },
         reportero: {
-            resolve: async (parent, _) => await reporteroResolver.find(null, { page: 1, perPage: 1, resource: { _id: { $in: parent.rents } } }),
-            type: GraphQLList(ReporteroType)
+            resolve: async (parent, _) => (await reporteroResolver.find(null, { page: 1, perPage: 1, resource: { _id: parent.reportero } }))?.[0] ?? null,
+            type: ReporteroType
         },
         aprobada: { type: GraphQLBoolean },
         descripcion: { type: GraphQLString },

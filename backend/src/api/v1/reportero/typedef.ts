@@ -2,6 +2,9 @@
 
 import { GraphQLObjectType, GraphQLString, GraphQLInputObjectType, GraphQLNonNull } from 'graphql';
 import { CategoriaType } from '../categoria/typedef';
+import { CategoriaResolver } from '../categoria/resolver';
+
+const categoriaResolver = new CategoriaResolver();
 
 export const ReporteroType = new GraphQLObjectType({
     name: 'Reportero',
@@ -13,7 +16,10 @@ export const ReporteroType = new GraphQLObjectType({
         direccion: { type: GraphQLString },
         ciudad: { type: GraphQLString },
         cp: { type: GraphQLString },
-        categoria: { type: GraphQLString }
+        categoria: {
+            resolve: async (parent, _) => (await categoriaResolver.find(null, { page: 1, perPage: 1, resource: { _id: parent.categoria } }))?.[0] ?? null,
+            type: CategoriaType
+        },
     }
 });
 

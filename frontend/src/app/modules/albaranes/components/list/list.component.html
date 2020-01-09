@@ -1,0 +1,6 @@
+<h5>Albaranes</h5>
+<div class="col-10 list-group list-group-flush">
+  <li class="list-group-item" *ngFor="let albaran of (albaranesService.albaranes$ | async)">
+    <span class="col">{{ albaran._id }}</span>
+  </li>
+</div>

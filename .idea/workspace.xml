@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e5f1554-dae7-4358-b93b-9a8a5db03372" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/albaranes/albaranes.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/albaranes/albaranes.routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/albaranes/components/list/list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/albaranes/components/list/list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/albaranes/components/list/list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/albaranes/components/page/page.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/albaranes/components/page/page.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/albaranes/defaults.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/albaranes/services/albaranes.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/editoriales/components/details/details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/editoriales/components/details/details.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/editoriales/components/details/details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/editoriales/components/details/details.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/editoriales/services/editoriales.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/editoriales/services/editoriales.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/albaran.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/albaran.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/reportajes/components/list/list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/reportajes/components/list/list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/reportajes/components/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/reportajes/components/list/list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/reportajes/reportajes.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/reportajes/reportajes.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/shared/services/gqlhttp.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/services/gqlhttp.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578421187911</updated>
       <workItem from="1578421189960" duration="6712000" />
-      <workItem from="1578594188060" duration="5346000" />
+      <workItem from="1578594188060" duration="6506000" />
     </task>
     <servers />
   </component>
@@ -77,10 +90,10 @@
       <screen x="45" y="27" width="1875" height="1053" />
     </state>
     <state x="790" y="271" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/45.27.1875.1053@45.27.1875.1053" timestamp="1578598293245" />
-    <state x="637" y="288" width="691" height="528" key="find.popup" timestamp="1578594707536">
+    <state x="637" y="288" width="691" height="528" key="find.popup" timestamp="1578600298938">
       <screen x="45" y="27" width="1875" height="1053" />
     </state>
-    <state x="637" y="288" width="691" height="528" key="find.popup/45.27.1875.1053@45.27.1875.1053" timestamp="1578594707536" />
+    <state x="637" y="288" width="691" height="528" key="find.popup/45.27.1875.1053@45.27.1875.1053" timestamp="1578600298938" />
     <state x="645" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1578598783257">
       <screen x="45" y="27" width="1875" height="1053" />
     </state>

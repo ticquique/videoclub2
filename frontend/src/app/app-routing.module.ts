@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'reportajes',
     loadChildren: () => import('./modules/reportajes/reportajes.module').then(m => m.ReportajesModule)
+  },
+  {
+    path: 'albaranes',
+    loadChildren: () => import('./modules/albaranes/albaranes.module').then(m => m.AlbaranesModule)
   }
 ];
 

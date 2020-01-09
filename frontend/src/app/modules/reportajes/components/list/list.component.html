@@ -1,8 +1,21 @@
 <h5>Reportajes</h5>
 <div class="col-10 list-group list-group-flush">
   <li class="list-group-item" *ngFor="let reportaje of (reportajesService.reportajes$ | async)">
-    <span class="col">{{ reportaje._id }}</span>
-    <span class="col">{{ reportaje.descripcion }}</span>
-    <button class="btn btn-primary" (click)="comprar(reportaje._id)">Comprar</button>
+    <div class="col-4">
+      <span>{{ reportaje._id }}</span>
+      <span>{{ reportaje.descripcion }}</span>
+    </div>
+    <div class="col-4">
+      <select class="form-control" [(ngModel)]="edito">
+        <option value="" *ngFor="let editorial of (editorialesService.editoriales$ | async)">{{ editorial.name }}</option>
+      </select>
+    </div>
+    <div class="col-4">
+      <label>Precio</label>
+      <input type="text" class="form-control" [(ngModel)]="pvp">
+    </div>
+    <div class="col-4">
+      <button class="btn btn-primary" (click)="comprar(reportaje._id)">Comprar</button>
+    </div>
   </li>
 </div>

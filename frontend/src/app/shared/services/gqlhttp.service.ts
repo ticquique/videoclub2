@@ -8,7 +8,7 @@ import { Solicitud } from '../../models/solicitud';
 import { Reportero } from '../../models/reportero';
 import { Categoria } from '../../models/categoria';
 
-export type Endpoints = 'solicitud' | 'reportero' | 'categoria' | 'editorial' | 'reportaje';
+export type Endpoints = 'solicitud' | 'reportero' | 'categoria' | 'editorial' | 'reportaje' | 'albaran';
 type Interfaces = Solicitud | Reportero | Categoria;
 
 const categoria = "{ _id, ppp, name }"
@@ -16,6 +16,7 @@ const reportero =`{ _id, name, dni, apellidos, direccion, ciudad, cp }`
 const solicitud = `{ _id, reportero ${reportero}, aprobada, descripcion, fecha, equipoFotografico, resumenCV }`
 const editorial = `{ _id, name, cif, direccion }`
 const reportaje = `{ _id, numeroFotos, descripcion, reportero ${reportero} }`
+const albaran = `{ _id, editorial ${editorial}, cantidadRecibida,  cantidadPagada, reportaje ${reportaje}, created_at }`
 
 const mapping = {
   solicitud,

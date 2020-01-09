@@ -29,4 +29,8 @@ export class SolicitudesService {
     console.log('Creating movie');
     return this.gqlhttp.post(this.apiPath, body);
   }
+
+  aprobe(body) {
+    return this.gqlhttp.post(this.apiPath, body);
+  }
 }

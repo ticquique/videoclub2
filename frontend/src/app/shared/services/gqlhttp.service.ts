@@ -11,7 +11,7 @@ import { Categoria } from '../../models/categoria';
 export type Endpoints = 'solicitud' | 'reportero' | 'categoria';
 type Interfaces = Solicitud | Reportero | Categoria;
 
-const categoria = "{ _id, ppp }"
+const categoria = "{ _id, ppp, name }"
 const reportero =`{ _id, name, dni, apellidos, direccion, ciudad, cp }`
 const solicitud = `{ _id, reportero ${reportero}, aprobada, descripcion, fecha, equipoFotografico, resumenCV }`
 

@@ -10,4 +10,8 @@ export class SolicitudesListComponent {
   constructor(public solicitudesService: SolicitudesService) {
     this.solicitudesService.get().subscribe();
   }
+
+  aprobe(id) {
+    this.solicitudesService.aprobe({ _id: id, aprobada: true }).subscribe()
+  }
 }

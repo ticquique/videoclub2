@@ -11,7 +11,8 @@ export class CategoriaCreationComponent {
 
   constructor(public categoriasService: CategoriasService) {
     this.categoriaForm = new FormGroup({
-      ppp: new FormControl('', [Validators.required])
+      ppp: new FormControl('', [Validators.required]),
+      name: new FormControl('', [Validators.required])
     });
   }
 

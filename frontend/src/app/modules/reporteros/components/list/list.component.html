@@ -1,6 +1,14 @@
 <h5>Reporteros</h5>
 <div class="col-10 list-group list-group-flush">
   <li class="list-group-item" *ngFor="let reportero of (reporterosService.reporteros$ | async)">
-    <span class="col">{{ reportero.name }}</span>
+    <div class="col-4">
+      <span>{{ reportero.name }}</span>
+    </div>
+    <div class="col-4">
+      <span>Promocionar a: </span>
+      <select id="" class="form-control">
+        <option value="" *ngFor="let categoria of (categoriasService.categorias$ | async)"></option>
+      </select>
+    </div>
   </li>
 </div>

@@ -25,6 +25,6 @@ export const ReportajeInputType = new GraphQLInputObjectType({
         _id: { type: GraphQLString },
         numeroFotos: { type: GraphQLInt },
         descripcion: { type: GraphQLString },
-        reportero: { type: ReporteroType }
+        reportero: { type: GraphQLString }
     }
 });

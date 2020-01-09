@@ -3,5 +3,6 @@
   <li class="list-group-item" *ngFor="let reportaje of (reportajesService.reportajes$ | async)">
     <span class="col">{{ reportaje._id }}</span>
     <span class="col">{{ reportaje.descripcion }}</span>
+    <button class="btn btn-primary" (click)="comprar(reportaje._id)">Comprar</button>
   </li>
 </div>

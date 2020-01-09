@@ -22,7 +22,8 @@ const mapping = {
   reportero,
   categoria,
   editorial,
-  reportaje
+  reportaje,
+  albaran
 }
 
 @Injectable()

@@ -1,0 +1,7 @@
+<h5>Editoriales</h5>
+<div class="col-10 list-group list-group-flush">
+  <li class="list-group-item" *ngFor="let editorial of (editorialesService.editoriales$ | async)">
+    <span class="col">{{ editorial._id }}</span>
+    <span class="col"><a [routerLink]="[editorial._id]">{{ editorial.name }}</a></span>
+  </li>
+</div>

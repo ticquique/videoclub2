@@ -1,0 +1,22 @@
+<h5>Editorial {{ editorial.name }}</h5>
+<form (ngSubmit)="edit()" [formGroup]="editorialForm">
+  <div class="row">
+    <div class="col-4">
+      <label>Nombre</label>
+      <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="col-4">
+      <label>CIF</label>
+      <input type="text" class="form-control" formControlName="cif">
+    </div>
+    <div class="col-4">
+      <label>Direccion</label>
+      <input type="text" class="form-control" formControlName="direccion">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <button class="btn btn-primary" type="submit">Editar</button>
+    </div>
+  </div>
+</form>

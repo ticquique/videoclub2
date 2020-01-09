@@ -8,19 +8,21 @@ import { Solicitud } from '../../models/solicitud';
 import { Reportero } from '../../models/reportero';
 import { Categoria } from '../../models/categoria';
 
-export type Endpoints = 'solicitud' | 'reportero' | 'categoria' | 'editorial';
+export type Endpoints = 'solicitud' | 'reportero' | 'categoria' | 'editorial' | 'reportaje';
 type Interfaces = Solicitud | Reportero | Categoria;
 
 const categoria = "{ _id, ppp, name }"
 const reportero =`{ _id, name, dni, apellidos, direccion, ciudad, cp }`
 const solicitud = `{ _id, reportero ${reportero}, aprobada, descripcion, fecha, equipoFotografico, resumenCV }`
-const editorial = `{ _id, name, cif, direccion, reportero ${reportero} }`
+const editorial = `{ _id, name, cif, direccion }`
+const reportaje = `{ _id, numeroFotos, descripcion, reportero ${reportero} }`
 
 const mapping = {
   solicitud,
   reportero,
   categoria,
-  editorial
+  editorial,
+  reportaje
 }
 
 @Injectable()

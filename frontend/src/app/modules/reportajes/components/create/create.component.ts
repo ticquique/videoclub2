@@ -11,6 +11,7 @@ export class ReportajeCreationComponent {
   reportajeForm: FormGroup;
 
   constructor(public reportajesService: ReportajesService, public reporterosService: ReporterosService) {
+    this.reporterosService.get().subscribe();
     this.reportajeForm = new FormGroup({
       numeroFotos: new FormControl('', [Validators.required]),
       descripcion: new FormControl('', [Validators.required]),
@@ -19,6 +20,7 @@ export class ReportajeCreationComponent {
   }
 
   create() {
+    this.reportajeForm.controls.numeroFotos.setValue(+this.reportajeForm.controls.numeroFotos.value);
     this.reportajesService.create(this.reportajeForm.value).subscribe(() => this.reportajeForm.reset());
   }
 }

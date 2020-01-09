@@ -1,7 +1,7 @@
 export interface Reportaje {
-  _id: string;
-  numeroFotos: number;
-  descripcion: string;
+    _id: string;
+    numeroFotos: number;
+    descripcion: string;
 }
 
 import { Document, Schema, model, Model } from 'mongoose';

@@ -9,4 +9,5 @@ export interface Reportero {
   ciudad: string;
   cp: string;
   categoria: Categoria;
+  _oldcat?: Categoria;
 }

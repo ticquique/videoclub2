@@ -50,7 +50,7 @@ SolicitudSchema.pre('save', async function (this: Document & ISolicitud, next) {
     try {
         const date = new Date(this.fecha);
         const dateAgo = new Date(date.setMonth(date.getMonth() - 1));
-        const existMember = await Solicitud.exists({ fecha: { "$gte": dateAgo } });
+        const existMember = await Solicitud.exists({ fecha: { "$gte": dateAgo }, reportero: this.reportero });
         if (existMember) throw (new Error('Debe esperar al menos un mes entre solicitudes'));
         this.fecha = date;
         next();

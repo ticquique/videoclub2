@@ -20,6 +20,11 @@ const ReporteroFields = {
         ref: Categoria,
         required: true
     },
+    _oldcat: {
+        type: Schema.Types.ObjectId,
+        ref: Categoria,
+        required: false
+    },
     dni: {
         type: String,
         required: true,
@@ -57,6 +62,22 @@ const ReporteroSchema = new Schema(ReporteroFields, {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
 });
 
+
+ReporteroSchema.pre('save', async function (this: Document & IReportero, next) {
+    try {
+        const categoria = (await Categoria.findById(this.categoria))?.name;
+        if (categoria) {
+            const oldCat = (await Categoria.findById(this._oldcat))?.name;
+            if (oldCat) {
+                if (categoria < oldCat) {
+                    throw (new Error('La categoria debe ser superior'));
+                }
+            }
+            this._oldcat = this.categoria;
+        }
+        next();
+    } catch (e) { next(e); }
+});
 
 ReporteroSchema.loadClass(ReporteroClass);
 

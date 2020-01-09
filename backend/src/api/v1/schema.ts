@@ -7,12 +7,16 @@ import { SolicitudRouter } from "./solicitud/solicitud";
 import { applyMiddleware } from "graphql-middleware";
 import { CategoriaRouter } from "./categoria/categoria";
 import { ReporteroRouter } from "./reportero/reportero";
+import { ReportajeRouter } from "./reportaje/reportaje";
+import { EditorialRouter } from "./editorial/editorial";
 
 const authService = new AuthMiddleware();
 const routers = [
     new SolicitudRouter(),
     new CategoriaRouter(),
     new ReporteroRouter(),
+    new ReportajeRouter(),
+    new EditorialRouter(),
 ];
 
 const routes = routers.reduce((o,c) => ({...o, ...c.getRoutes()}), {})

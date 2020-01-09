@@ -18,6 +18,7 @@ export class CategoriaCreationComponent {
 
   create() {
     this.categoriaForm.controls.ppp.setValue(+this.categoriaForm.controls.ppp.value);
+    this.categoriaForm.controls.name.setValue(+this.categoriaForm.controls.name.value);
     this.categoriasService.create(this.categoriaForm.value).subscribe(() => this.categoriaForm.reset());
   }
 }

@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e5f1554-dae7-4358-b93b-9a8a5db03372" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/categoria.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/categoria.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/categorias/components/create/create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/categorias/components/create/create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/categorias/components/create/create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/categorias/components/create/create.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/reporteros/components/list/list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/reporteros/components/list/list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/reporteros/components/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/reporteros/components/list/list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/solicitudes/components/list/list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/solicitudes/components/list/list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/solicitudes/components/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/solicitudes/components/list/list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/solicitudes/services/solicitudes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/solicitudes/services/solicitudes.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/shared/services/gqlhttp.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/services/gqlhttp.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578421187911</updated>
       <workItem from="1578421189960" duration="6712000" />
-      <workItem from="1578594188060" duration="1231000" />
+      <workItem from="1578594188060" duration="1731000" />
     </task>
     <servers />
   </component>
@@ -86,5 +77,9 @@
       <screen x="45" y="27" width="1875" height="1053" />
     </state>
     <state x="637" y="288" width="691" height="528" key="find.popup/45.27.1875.1053@45.27.1875.1053" timestamp="1578594707536" />
+    <state x="645" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1578595643111">
+      <screen x="45" y="27" width="1875" height="1053" />
+    </state>
+    <state x="645" y="257" width="672" height="678" key="search.everywhere.popup/45.27.1875.1053@45.27.1875.1053" timestamp="1578595643111" />
   </component>
 </project>

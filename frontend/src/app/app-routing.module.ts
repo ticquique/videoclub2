@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'categorias',
     loadChildren: () => import('./modules/categorias/categorias.module').then(m => m.CategoriasModule)
+  },
+  {
+    path: 'editoriales',
+    loadChildren: () => import('./modules/editoriales/editoriales.module').then(m => m.EditorialesModule)
+  },
+  {
+    path: 'reportajes',
+    loadChildren: () => import('./modules/reportajes/reportajes.module').then(m => m.ReportajesModule)
   }
 ];
 

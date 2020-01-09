@@ -1,0 +1,21 @@
+<form (ngSubmit)="create()" [formGroup]="reportajeForm">
+  <div class="row">
+    <div class="col-4">
+      <label>Numero fotos</label>
+      <input type="text" formControlName="name">
+    </div>
+    <div class="col-4">
+      <label>Descripcion</label>
+      <input type="text" formControlName="cif">
+    </div>
+    <div class="col-4">
+      <label>Reportero</label>
+      <select class="form-control">
+        <option value="{{ reportero._id }}" *ngFor="let reportero of (reporterosService.reporteros$ | async)">{{ reportero.name }}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <button type="submit" class="col-3 btn btn-success">Crear</button>
+  </div>
+</form>

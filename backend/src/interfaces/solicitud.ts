@@ -5,7 +5,7 @@ export interface Solicitud {
   reportero: Reportero;
   aprobada: boolean;
   descripcion: string;
-  fecha: string;
+  fecha: Date;
   equipoFotografico: string;
   resumenCV: string;
 }

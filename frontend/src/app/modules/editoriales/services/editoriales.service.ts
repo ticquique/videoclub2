@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject, Observable } from 'rxjs';
 
-import { tap } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { Endpoints, GqlhttpService } from '../../../shared/services/gqlhttp.service';
 import { Editorial } from '../../../models/editorial';
 
@@ -32,9 +32,11 @@ export class EditorialesService {
 
   getOne(id): any {
     console.log('Retrieving editoriales');
-    return this.gqlhttp.get(this.apiPath, {resources: { _id: id}}).pipe(tap((response: any) => {
-      console.log(response[0]);
-      this.editorial.next(response[0])
+    return this.gqlhttp.get(this.apiPath, {resources: { _id: id}}).pipe(
+      map(v => v[0]),
+      tap((response: any) => {
+        console.log('1', response);
+        this.editorial.next(response)
     }));
   }
 

@@ -1,5 +1,5 @@
 <h5>Editorial {{ editorial.name }}</h5>
-<form (ngSubmit)="edit()" [formGroup]="editorialForm">
+<form (ngSubmit)="edit()" *ngIf="editorialForm" [formGroup]="editorialForm">
   <div class="row">
     <div class="col-4">
       <label>Nombre</label>

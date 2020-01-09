@@ -1,1 +1,0 @@
-{"version":3,"file":"resolver.js","sourceRoot":"","sources":["../../../../src/api/v1/administrator/resolver.ts"],"names":[],"mappings":"AAAA,YAAY,CAAC;;AAEb,4CAAgD;AAEhD,2CAAoC;AAEpC,MAAa,qBAAsB,SAAQ,aAAmB;IAC1D;QACI,KAAK,CAAC,sBAAa,CAAC,CAAC;QACrB,IAAI,CAAC,KAAK,GAAG,sBAAa,CAAA;IAC9B,CAAC;CACJ;AALD,sDAKC"}

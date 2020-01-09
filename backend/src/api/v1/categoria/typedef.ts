@@ -7,7 +7,8 @@ export const CategoriaType = new GraphQLObjectType({
     name: 'CategoriaType',
     fields: {
         _id: { type: GraphQLString },
-        ppp: { type: GraphQLInt }
+        ppp: { type: GraphQLInt },
+        name: { type: GraphQLInt }
     }
 });
 
@@ -15,6 +16,7 @@ export const CategoriaInputType = new GraphQLInputObjectType({
     name: 'CategoriaInputType',
     fields: {
         _id: { type: GraphQLString },
-        ppp: { type: GraphQLInt }
+        ppp: { type: GraphQLInt },
+        name: { type: GraphQLInt }
     }
 });

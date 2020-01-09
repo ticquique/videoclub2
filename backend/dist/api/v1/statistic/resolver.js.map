@@ -1,1 +1,0 @@
-{"version":3,"file":"resolver.js","sourceRoot":"","sources":["../../../../src/api/v1/statistic/resolver.ts"],"names":[],"mappings":"AAAA,YAAY,CAAC;;AAEb,4CAA4C;AAE5C,2CAAoC;AAEpC,MAAa,iBAAkB,SAAQ,aAAe;IAClD;QACI,KAAK,CAAC,kBAAS,CAAC,CAAC;QACjB,IAAI,CAAC,KAAK,GAAG,kBAAS,CAAA;IAC1B,CAAC;CACJ;AALD,8CAKC"}

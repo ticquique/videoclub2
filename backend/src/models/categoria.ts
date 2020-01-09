@@ -15,6 +15,11 @@ const CategoriaFields = {
     ppp: {
         type: Number,
         required: true
+    },
+    name: {
+        type: Number,
+        required: true,
+        dropDups: true
     }
 };
 
